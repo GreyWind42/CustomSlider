@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+  <name>mod_customslider</name>
+  <author>Johannes Pirnbacher</author>
+  <version>1.0.0</version>
+  <description>Bootstrap-Slider-Modul</description>
+  <files>
+    <filename module="mod_customslider">mod_customslider.php</filename>
+    <filename>mod_customslider.xml</filename>
+    <folder>tmpl</folder>
+  </files>
+  <config>
+    <fields name="params">
+
+      <fieldset name="basic" label="Bildeinstellungen">
+
+        <field name="info1" type="spacer" label="Allgemeine Konfiguration für Text und Bild" description="Diese Optionen gelten für alle Slides." />
+        
+        <field name="showArrows" type="radio" default="1" label="Navigationspfeile" description="Legt fest, ob Vor-/Zurück-Pfeile im Slider angezeigt werden.">
+          <option value="1">Ja</option>
+          <option value="0">Nein</option>
+        </field>
+
+        <field name="carouselFade" type="radio" default="0" label="Carousel Fade" description="Legt fest, ob Carousel Fade an oder aus ist.">
+          <option value="1">Ja</option>
+          <option value="0">Nein</option>
+        </field>
+
+        <field name="interval" type="number" default="5000" label="Automatischer Bildwechsel (ms)" description="Gibt an, nach wie vielen Millisekunden automatisch zum nächsten Bild gewechselt wird.">
+          <validate rule="integer" />
+          <filter>int</filter>
+        </field>
+
+        <field name="heading" type="list" label="Überschrift-Typ">
+          <option value="h1">H1</option>
+          <option value="h2">H2</option>
+          <option value="h3">H3</option>
+          <option value="h4">H4</option>
+          <option value="h5">H5</option>
+        </field>
+      <field name="headingSize"
+        type="text"
+        label="Größe der Überschrift (z.B. 2rem)"
+        default="1rem"
+        description="Gib die Schriftgröße für die Überschrift an (z.B. 2rem, 1.5em, 24px …)" />
+
+      <field name="descSize"
+        type="text"
+        label="Größe der Beschreibung (z.B. 1.2rem)"
+        default="1rem"
+        description="Gib die Schriftgröße für die Beschreibung an (z.B. 1rem, 0.9em …)" />
+
+
+        <field name="info2" type="spacer" label="Konfiguration für die einzelnen Bilder" />
+
+        <field name="image1" type="media" label="Image 1" />
+        <field name="title1" type="text" label="Überschrift 1" />
+        <field name="desc1" type="textarea" label="Beschreibung 1" />
+        <field name="captionClass1" type="text" label="Klasse Text 1 (default: carousel-caption d-none d-md-block)" />
+        <field name="link1" type="url" label="Link 1" />
+    
+        <field name="image2" type="media" label="Bild 2" />
+        <field name="title2" type="text" label="Überschrift 2" />
+        <field name="desc2" type="textarea" label="Beschreibung 2" />
+        <field name="captionClass2" type="text" label="Klasse Text 2 (default: carousel-caption d-none d-md-block)" />
+        <field name="link2" type="url" label="Link 2" />
+    
+        <field name="image3" type="media" label="Bild 3" />
+        <field name="title3" type="text" label="Überschrift 3" />
+        <field name="desc3" type="textarea" label="Beschreibung 3" />
+        <field name="captionClass3" type="text" label="Klasse Text 3 (default: carousel-caption d-none d-md-block)" />
+        <field name="link3" type="url" label="Link 3" />
+    
+        <field name="image4" type="media" label="Bild 4" />
+        <field name="title4" type="text" label="Überschrift 4" />
+        <field name="desc4" type="textarea" label="Beschreibung 4" />
+        <field name="captionClass4" type="text" label="Klasse Text 4 (default: carousel-caption d-none d-md-block)" />
+        <field name="link4" type="url" label="Link 4" />
+    
+        <field name="image5" type="media" label="Bild 5" />
+        <field name="title5" type="text" label="Überschrift 5" />
+        <field name="desc5" type="textarea" label="Beschreibung 5" />
+        <field name="captionClass5" type="text" label="Klasse Text 5 (default: carousel-caption d-none d-md-block)" />
+        <field name="link5" type="url" label="Link 5" />
+    
+      </fieldset>
+    </fields>
+  </config>
+</extension>
